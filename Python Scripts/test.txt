@@ -1,0 +1,57 @@
+                               Stats          Oni  ...       Draken                                         Unnamed: 6
+0                              Brawn  1114.368003  ...  1959.908569          https://github.com/AntiSped/Noreldynn.git
+1                          Knowledge  1504.183341  ...   523.543974                                                NaN
+2                          Dexterity   317.374698  ...    67.299363  Elly here's the repository. If this is Adeliza...
+3                          Toughness   166.587690  ...   788.293822                                                NaN
+4                             Spirit   788.293822  ...  1114.368003                                                NaN
+..                               ...          ...  ...          ...                                                ...
+102   Paralyze Area of Effect Damage          NaN  ...          NaN                                                NaN
+103  Paralyze Area of Effect Amount           NaN  ...          NaN                                                NaN
+104                              NaN          NaN  ...          NaN                                                NaN
+105                      Wind Attack          NaN  ...          NaN                                                NaN
+106                  Wind Resistance          NaN  ...          NaN                                                NaN
+
+[107 rows x 7 columns]   Bladesmaster               60                             Unnamed: 2  Unnamed: 3
+0           NaN  Name of Passive                             Stat Given  Stat Value
+1     Passive 1  Sword Expertise  +Longsword, Dagger, Shortsword Damage        0.75
+2     Passive 2              NaN                         +Bleed Potency           6
+3     Passive 3              NaN                                      +         NaN
+4     Passive 4              NaN                                    NaN         NaN
+5     Passive 5              NaN                                    NaN         NaN
+6     Passive 6              NaN                                    NaN         NaN
+7     Passive 7              NaN                                    NaN         NaN
+8      Active 1              NaN                                    NaN         NaN
+9      Active 2              NaN                                    NaN         NaN
+10     Active 3              NaN                                    NaN         NaN
+11     Active 4              NaN                                    NaN         NaN              Name  Level  Difficulty Rank  Vitality  ...  EP Drops  Level Modifier  Elite Mod  Enemy Type
+0   Shroud Outcast      1                0    16.240  ...       NaN           1.015          1      Shroud
+1   Shroud Acolyte      1                0    14.210  ...       NaN           1.015          1      Shroud
+2    Shroud Bandit      1                0    64.960  ...       NaN           1.015          1      Shroud
+3   Shroud Warlock      1                0    49.735  ...       NaN           1.015          1      Shroud
+4    Shroud Knight      1                0    75.110  ...       NaN           1.015          1      Shroud
+..             ...    ...              ...       ...  ...       ...             ...        ...         ...
+73      Ruin Golem      1                0  1483.930  ...       NaN           1.015          1   Construct
+74   Dungeon Golem      1                0  1483.930  ...       NaN           1.015          1   Construct
+75    Cavern Golem      1                0  1483.930  ...       NaN           1.015          1   Construct
+76   Ancient Golem      1                0  1483.930  ...       NaN           1.015          1   Construct
+77      Mage Golem      1                0  1483.930  ...       NaN           1.015          1   Construct
+
+[78 rows x 18 columns]    Skill Name                    Type            Stat Input  ... Modified Value   Base Value  Ability Modifier
+0        Slash  Active/Basic/Longsword              Physical  ...             NaN         NaN               NaN
+1  Sheathguard  Active/Spell/Longsword              Physical  ...             NaN         NaN               NaN
+2    Omnislash  Active/Spell/Longsword  Physical/Wind Attack  ...             NaN         NaN               NaN
+
+[3 rows x 10 columns]        Needed EP  Level      Total EP
+0    0.000000e+00      1  0.000000e+00
+1    1.718280e+03      2  1.718280e+03
+2    5.086109e+03      3  6.804389e+03
+3    1.058546e+04      4  1.738985e+04
+4    1.879978e+04      5  3.618964e+04
+..            ...    ...           ...
+120  2.074666e+12    121  1.803862e+13
+121  2.341104e+12    122  2.037972e+13
+122  2.641403e+12    123  2.302113e+13
+123  2.979828e+12    124  2.600096e+13
+124  3.361176e+12    125  2.936213e+13
+
+[125 rows x 3 columns]

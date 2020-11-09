@@ -8,3 +8,7 @@ for i in sheet.keys():
 print("\n")
 print(sheet["Player_Races"])
 print(sheet["Player_Races"]["Oni"][0])
+
+with open("test.txt", 'a') as file:
+    for i in sheet.keys():
+        file.write(str(sheet[i]))
