@@ -7,7 +7,7 @@ for i in sheet.keys():
 
 print("\n")
 print(sheet["Player_Races"])
-print(sheet["Player_Races"]["Oni"][0])
+print(sheet["Player_Races"]["Oni"])
 
 with open("test.txt", 'a') as file:
     for i in sheet.keys():
