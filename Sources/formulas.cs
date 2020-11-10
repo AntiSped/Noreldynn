@@ -54,19 +54,31 @@ public class Formulas
         return ((10 * level_modifier) + (1 * (knowledge + toughness) * power_level));
 
     }
-
-    static void Main(string[] args)
-    {
-
-        double vitality = Vitality(level_modifier: 3578.5262, brawn: 1114, toughness: 167, power_level: 125);
-        Console.WriteLine(vitality);
-
-        double aether = Aether(knowledge: 1504);
-        Console.WriteLine(aether);
-    }
 }
 
-public class OniAttributes {}
+public class OniAttributes 
+{
+    
+    public static double Brawn(double power_level)
+    {
+        double val = Math.Pow(0.7 + (0.175 * power_level), 2.25);
+        return (3.5 + (val));
+
+    }
+
+    public static double Knowledge(double power_level)
+    {
+        double val = Math.Pow(0.8 + (0.2 * power_level), 2.25);
+        return (4 + val);
+    }
+
+    public static void Main(string[] args)
+    {
+        Formulas formulaObject = new Formulas();
+
+        Console.WriteLine(Knowledge(power_level: 125));
+    }
+}
 
 public class WerewolfFormulas{}
 
