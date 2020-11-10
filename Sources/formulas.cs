@@ -192,16 +192,39 @@ public class KitsuneAttribute
         double val = Math.Pow(0.9 + (0.225 * power_level), 2.25);
         return (4.5 + val);
     }
-
-    public static void Main(string[] args)
-    {
-        Console.WriteLine(Brawn(power_level: 125));
-        Console.WriteLine(Knowledge(power_level: 125));
-        Console.WriteLine(Dexterity(power_level: 125));
-        Console.WriteLine(Toughness(power_level: 125));
-        Console.WriteLine(Spirit(power_level: 125));
-    }
 }
 
-public class DrakenAttribute{}
+public class DrakenAttribute
+{
+    public static double Brawn(double power_level)
+    {
+        double val = Math.Pow(0.9 + (0.225 * power_level), 2.25);
+        return (4.5 + (val));
+
+    }
+
+    public static double Knowledge(double power_level)
+    {
+        double val = Math.Pow(0.5 + (0.125 * power_level), 2.25);
+        return (2.5 + val);
+    }
+
+    public static double Dexterity(double power_level)
+    {
+        double val = Math.Pow(0.2 + (0.05 * power_level), 2.25);
+        return (1 + val);
+    }
+
+    public static double Toughness(double power_level)
+    {
+        double val = Math.Pow(0.6 + (0.15 * power_level), 2.25);
+        return (3 + val);
+    }
+
+    public static double Spirit(double power_level)
+    {
+        double val = Math.Pow(0.7 + (0.175 * power_level), 2.25);
+        return (3.5 + val);
+    }
+}
     
