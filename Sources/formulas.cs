@@ -12,7 +12,7 @@ class OniFormulas {
     }
     static void Main(string[] args){
 
-        int test = Vitality(3578, 1114, 167, 125);
+        int test = Vitality(level_modifier: 3578, brawn: 1114, toughness: 167, power_level: 125);
         Console.WriteLine(test);
     }
 }
