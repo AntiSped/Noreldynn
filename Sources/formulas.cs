@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Formulas 
+public class Formula
 {
 
     public static double Vitality(double level_modifier, int brawn, int toughness, int power_level) 
@@ -56,7 +56,7 @@ public class Formulas
     }
 }
 
-public class OniAttributes 
+public class OniAttribute
 {
     
     public static double Brawn(double power_level)
@@ -72,7 +72,7 @@ public class OniAttributes
         return (4 + val);
     }
 
-    public static double Dexteriy(double power_level)
+    public static double Dexterity(double power_level)
     {
         double val = Math.Pow(0.4 + (0.1 * power_level), 2.25);
         return (2 + val);
@@ -92,17 +92,17 @@ public class OniAttributes
 
     public static void Main(string[] args)
     {
-        Formulas formulaObject = new Formulas();
+        Formulas formulaObject = new Formula();
 
         Console.WriteLine(Dexteriy(power_level: 125));
     }
 }
 
-public class WerewolfFormulas{}
+public class WerewolfAttribute{}
 
-public class ManawraithFormulas{}
+public class ManawraithAttribute{}
 
-public class KitsuneFormulas{}
+public class KitsuneAttribute{}
 
-public class DrakenFormulas{}
+public class DrakenAttribute{}
     
