@@ -86,19 +86,50 @@ public class OniAttribute
     
     public static double Spirit(double power_level)
     {
-        double val = Math.Pow(0.6 + (0.25 * power_level), 2.25);
+        double val = Math.Pow(0.6 + (0.15 * power_level), 2.25);
         return (3 + val);
+    }
+        ///Formula formulaObject = new Formula();
+}
+
+public class WerewolfAttribute
+{
+    public static double Brawn(double power_level)
+    {
+        double val = Math.Pow(0.7 + (0.175 * power_level), 2.25);
+        return (3.5 + (val));
+
+    }
+
+    public static double Knowledge(double power_level)
+    {
+        double val = Math.Pow(0.4+ (0.1 * power_level), 2.25);
+        return (2 + val);
+    }
+
+    public static double Dexterity(double power_level)
+    {
+        double val = Math.Pow(0.6 + (0.15 * power_level), 2.25);
+        return (3 + val);
+    }
+
+    public static double Toughness(double power_level)
+    {
+        double val = Math.Pow(0.8 + (0.2 * power_level), 2.25);
+        return (4 + val);
+    }
+
+    public static double Spirit(double power_level)
+    {
+        double val = Math.Pow(0.3 + (0.075 * power_level), 2.25);
+        return (1.5 + val);
     }
 
     public static void Main(string[] args)
     {
-        Formulas formulaObject = new Formula();
-
-        Console.WriteLine(Dexteriy(power_level: 125));
+        Console.WriteLine(Spirit(power_level: 125));
     }
 }
-
-public class WerewolfAttribute{}
 
 public class ManawraithAttribute{}
 
