@@ -1,6 +1,7 @@
 import pandas as pd
 import math
 import json
+import ast
 
 sheet = pd.read_excel('Sources/Noreldynn_-_Stat_Calculators.xlsx', sheet_name=None)
 
@@ -54,8 +55,21 @@ def type_script():
         for key in sheet["Player_Races"][race].keys():
             dict[sheet["Player_Races"]["Stats"][key]] = sheet["Player_Races"][race][key]
         
-        with open("{}_data.json".format(race), 'a') as file:
+        with open("{}_data.json".format(race), 'w') as file:
             file.write(json.dumps(dict, sort_keys=True, indent=4))
+
+def refresh_excel():
+    sheet = pd.read_excel('Sources/Noreldynn_-_Stat_Calculators.xlsx', sheet_name=None)
+    keys = sheet["Player_Races"].keys()
+
+
+    for key in keys:
+        with open("Sources/{}_data.json".format(key), 'r') as file:
+            print(sheet["Player_Races"][key])
+            data = json.dumps(ast.literal_eval(file.read()), sort_keys=True, indent=4, default=str)
+            print(data)
+            with open("Sources/{}_data.json".format(key), 'w') as file:
+                file.write(str(data))
 
 def start():
     rsp = input("Keys / Experience Table / Oni Information / Type Script / Deep Keys >> ")
@@ -67,10 +81,12 @@ def start():
         oni_information()
     elif rsp == "type script":
         type_script()
-    elif rsp == "deep keys":
+    elif rsp == "deep keys" or rsp == "Deep keys" or rsp == "Deep Keys":
         deep_keys()
-    elif rsp == "test":
+    elif rsp == "test" or rsp == "Test":
         test()
+    elif rsp == "refresh" or rsp == "refresh excel" or rsp == "Refresh" or rsp == "Refresh Excel":
+        refresh_excel()
     else:
         raise Exception("Failed to determine what task to complete.")
 
