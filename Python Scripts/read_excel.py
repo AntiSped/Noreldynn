@@ -1,5 +1,6 @@
 import pandas as pd
 import math
+import json
 
 sheet = pd.read_excel('Sources/Noreldynn_-_Stat_Calculators.xlsx', sheet_name=None)
 
@@ -45,16 +46,16 @@ def type_script():
     print(keys)
     
 
-    # for race in keys:
-    #     print(race)
-    #     print(sheet["Player_Races"][race])
+    for race in keys:
+        print(race)
+        print(sheet["Player_Races"][race])
 
-    #     dict = {}
-    #     for key in sheet["Player_Races"][race].keys():
-    #         dict[sheet["Player_Races"]["Stats"][key]] = sheet["Player_Races"][race][key]
+        dict = {}
+        for key in sheet["Player_Races"][race].keys():
+            dict[sheet["Player_Races"]["Stats"][key]] = sheet["Player_Races"][race][key]
         
-    #     with open("{}_data.json".format(race), 'a') as file:
-    #         file.write(str(dict))
+        with open("{}_data.json".format(race), 'a') as file:
+            file.write(json.dumps(dict, sort_keys=True, indent=4))
 
 def start():
     rsp = input("Keys / Experience Table / Oni Information / Type Script / Deep Keys >> ")
