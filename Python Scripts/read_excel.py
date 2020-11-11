@@ -67,12 +67,16 @@ try:
         keys = keys.delete(0)
 
         print(keys)
-        
+        for race in keys:
+            dict = {}
+            for key in sheet["Player Races"][race].keys():
+                dict[sheet["Player Races"]["Stats"][key]] = sheet["Player Races"][race][key]
+            
 
         for key in keys:
             with open("Sources/{}_data.json".format(key), 'r') as file:
                 print(sheet["Player Races"][key])
-                data = json.dumps(ast.literal_eval(file.read()), sort_keys=True, indent=4, default=str)
+                data = json.dumps(dict, sort_keys=True, indent=4, default=str)
                 print(data)
                 with open("Sources/{}_data.json".format(key), 'w') as file:
                     file.write("")
