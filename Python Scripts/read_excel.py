@@ -6,6 +6,7 @@ import os
 
 try:
     sheet = pd.read_excel('Sources/Noreldynn_-_Stat_Calculators.xlsx', sheet_name=None)
+    not_a_number = float("nan")
 
     def keys():
         for i in sheet.keys():
@@ -70,8 +71,10 @@ try:
         for race in keys:
             dict = {}
             for key in sheet["Player Races"][race].keys():
-                dict[sheet["Player Races"]["Stats"][key]] = sheet["Player Races"][race][key]
-            
+                if pd.isnull(sheet["Player Races"][race][key]):
+                    dict[sheet["Player Races"]["Stats"][key]] = "Not a Number"
+                else:
+                    dict[sheet["Player Races"]["Stats"][key]] = sheet["Player Races"][race][key]
 
         for key in keys:
             with open("Sources/{}_data.json".format(key), 'r') as file:
