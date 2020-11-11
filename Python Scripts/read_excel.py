@@ -38,19 +38,23 @@ def test():
 
 def type_script():
     keys = sheet["Player_Races"].keys()
+    print(keys)
+    
+    keys.delete(1)
 
     print(keys)
- 
-    for race in sheet["Player_Races"].keys():
-        print(race)
-        print(sheet["Player_Races"][race])
+    
 
-        dict = {}
-        for key in sheet["Player_Races"][race].keys():
-            dict[sheet["Player_Races"]["Stats"][key]] = sheet["Player_Races"][race][key]
+    # for race in keys:
+    #     print(race)
+    #     print(sheet["Player_Races"][race])
+
+    #     dict = {}
+    #     for key in sheet["Player_Races"][race].keys():
+    #         dict[sheet["Player_Races"]["Stats"][key]] = sheet["Player_Races"][race][key]
         
-        with open("{}_data.json".format(race), 'a') as file:
-            file.write(str(dict))
+    #     with open("{}_data.json".format(race), 'a') as file:
+    #         file.write(str(dict))
 
 def start():
     rsp = input("Keys / Experience Table / Oni Information / Type Script / Deep Keys >> ")
