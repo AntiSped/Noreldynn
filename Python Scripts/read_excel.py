@@ -45,7 +45,7 @@ try:
         keys = sheet["Player_Races"].keys()
         print(keys)
         
-        keys.delete(1)
+        keys = keys.delete(0)
 
         print(keys)
         
@@ -67,23 +67,19 @@ try:
 
         keys = keys.delete(0)
 
-        print(keys)
-        for race in keys:
-            dict = {}
-            for key in sheet["Player Races"][race].keys():
-                if pd.isnull(sheet["Player Races"][race][key]):
-                    dict[sheet["Player Races"]["Stats"][key]] = "Not a Number"
-                else:
-                    dict[sheet["Player Races"]["Stats"][key]] = sheet["Player Races"][race][key]
 
-        for key in keys:
-            with open("Sources/{}_data.json".format(key), 'r') as file:
-                print(sheet["Player Races"][key])
-                data = json.dumps(dict, sort_keys=True, indent=4, default=str)
-                print(data)
-                with open("Sources/{}_data.json".format(key), 'w') as file:
+        for race_key in keys:
+            dict = {}
+            for col_key in sheet["Player Races"][race_key].keys():
+                if pd.isnull(sheet["Player Races"][race_key][col_key]):
+                    dict[sheet["Player Races"]["Stats"][col_key]] = "Not a Number"
+                else:
+                    dict[sheet["Player Races"]["Stats"][col_key]] = sheet["Player Races"][race_key][col_key]
+                with open("Sources/{}_data.json".format(race_key), 'w') as file:
+                    data = json.dumps(dict, sort_keys=True, indent=4, default=str)
                     file.write("")
                     file.write(str(data))
+        print("Completed file refresh.")
 
     def start():
         rsp = input("Keys / Experience Table / Oni Information / Type Script / Deep Keys / Refresh >> ")
